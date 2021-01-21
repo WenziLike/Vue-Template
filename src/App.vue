@@ -1,21 +1,22 @@
 <template>
-  <!-- Header Content -->
-  <!-- body Content -->
-  <div class="wrapper">
-    <div class="wrapper-content">
-      <section>
-        <div class="container">
-          <h1>HELLO</h1>
-        </div>
-      </section>
-    </div>
-  </div>
-  <!-- Footer Content -->
+  <img alt="Vue logo" src="./assets/logo.png" />
+  <h1>Hello this is Vue</h1>
 </template>
 
 <script>
-export default {};
+export default {}
 </script>
 
-<style>
+<style lang="scss">
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+  img {
+    margin: 0 auto;
+  }
+}
 </style>
