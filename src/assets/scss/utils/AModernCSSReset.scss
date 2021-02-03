@@ -1,3 +1,23 @@
+/* Set core root defaults */
+html {
+    scroll-behavior: smooth;
+}
+//! добавил
+html {
+    line-height: $mainLineHeight;
+    font-size: $mainFontSize;
+    color: $mainFontColor;
+    height: 100%;
+    @media screen and (max-width: $desktopWidth) {
+        font-size: 16px;
+    }
+    @media screen and (max-width: $tableWidth) {
+        font-size: 15px;
+    }
+    @media screen and (max-width: $phoneWidth) {
+        font-size: 14px;
+    }
+}
 /* Box sizing rules */
 /* Указываем box sizing */
 *,
@@ -5,14 +25,21 @@
 *::after {
     box-sizing: border-box;
 }
-
-/* Remove default padding */
-/* Убираем внутренние отступы */
-ul[class],
-ol[class] {
+/* Set core body defaults */
+/* Выставляем основные настройки по-умолчанию для body */
+//! добавил
+body {
+    margin: 0;
     padding: 0;
+    // min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    // font-family: $mainFont;
+    font-size: $mainFontSize;
+    font-weight: $mainFontWeight;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
-
 /* Remove default margin */
 /* Убираем внешние отступы */
 body,
@@ -34,6 +61,25 @@ p,
 ul {
     line-height: 1.5;
 }
+/* Remove default padding */
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+/* Remove list styles on ul, ol elements with a class attribute */
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+// Title
 h1,
 h2,
 h3,
@@ -56,57 +102,6 @@ h2 {
 
 h3 {
     font-size: 1.35rem;
-}
-
-/* Set core root defaults */
-html {
-    scroll-behavior: smooth;
-}
-//! добавил
-html {
-    line-height: $mainLineHeight;
-    font-size: $mainFontSize;
-    color: $mainFontColor;
-    height: 100%;
-    @media screen and (max-width: $desktopWidth) {
-        font-size: 16px;
-    }
-    @media screen and (max-width: $tableWidth) {
-        font-size: 15px;
-    }
-    @media screen and (max-width: $phoneWidth) {
-        font-size: 14px;
-    }
-}
-
-/* Set core body defaults */
-/* Выставляем основные настройки по-умолчанию для body */
-//! добавил
-body {
-    margin: 0;
-    padding: 0;
-    // min-height: 100vh;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
-    // font-family: $mainFont;
-    font-size: $mainFontSize;
-    font-weight: $mainFontWeight;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-/* Remove list styles on ul, ol elements with a class attribute */
-/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
-ul[class],
-ol[class] {
-    list-style: none;
-}
-//! добавил
-ul,
-li {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
 }
 
 /* A elements that don't have a class get default styles */
@@ -213,14 +208,14 @@ strong,
 //====================================================================
 // Style Butttons
 .btn {
-    color: #42b983;
+    color: #0077ff;
     position: relative;
     place-content: center;
     place-items: center;
     width: fit-content;
     border-radius: 99px;
     letter-spacing: 0.05em;
-    border: 1px solid #42b983;
+    border: 1px solid #0077ff;
     text-decoration: none;
     text-transform: uppercase;
     margin-right: 10px;
@@ -249,8 +244,8 @@ strong,
     box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-.btn.primary {
-    background: #42b983;
+.btn.blue {
+    background: #0077ff;
     color: #fff;
 }
 
